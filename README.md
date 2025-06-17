@@ -1,10 +1,7 @@
 # Urban Pulse - A Comprehensive ELT Data Science Project
 
 ## Overview
-Urban Pulse demonstrates a complete ELT (Extract, Load, Transform) pipeline where data from
-multiple sources—weather APIs, simulated sensors, and social media sentiment—is processed,
-loaded into a SQLite database, transformed into actionable insights (like an urban stress index),
-and finally visualized via a Streamlit dashboard.
+Urban Pulse demonstrates a complete ELT (Extract, Load, Transform) pipeline where data from Multiple sources—weather APIs, simulated sensors, and social media sentiment—are processed, loaded into a SQLite database, transformed into actionable insights (like an urban stress index), and finally visualized via a Streamlit dashboard.
 
 ## Repository Structure
 
