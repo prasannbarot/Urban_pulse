@@ -22,16 +22,17 @@ This project extracts live data from APIs (e.g., weather, simulated sensors, and
 
 ## 📂 Directory Structure
 
-urban-pulse/ 
-├── data/ # Sample and schema files 
-├── extract/ # Data extraction modules (weather, sensors, social media) 
-├── load/ # Database loader scripts (SQLite) ├── transform/ # Data transformation and aggregation logic 
-├── dashboard/ # Streamlit app 
-├── orchestration/ # Airflow DAG for ELT orchestration 
-├── main.py # One-click ELT pipeline runner 
-├── requirements.txt # Project dependencies
-├── Dockerfile # (Optional) container build 
-└── README.md # You're reading it!
+urban-pulse/ <br>
+├── data/ # Sample and schema files <br>
+├── extract/ # Data extraction modules (weather, sensors, social media) <br>
+├── load/ # Database loader scripts (SQLite) <be>
+├── transform/ # Data transformation and aggregation logic <br>
+├── dashboard/ # Streamlit app <br>
+├── orchestration/ # Airflow DAG for ELT orchestration <br>
+├── main.py # One-click ELT pipeline runner <br>
+├── requirements.txt # Project dependencies <br>
+├── Dockerfile # (Optional) container build <br>
+└── README.md # You're reading it!<br>
 
 
 
