@@ -27,20 +27,20 @@ urban-pulse/ <br>
 │   ├── sample/     <br>                  
 │   │   └── weather_Toronto.json      # Sample weather JSON (created during testing) <br>
 │   └── schemas/                      # (Optional) JSON schemas for raw data validation <br>
-│
-├── extract/
-│   ├── __init__.py                   # (Empty file to mark package)
-│   ├── weather_extractor.py          # Fetches weather data from OpenWeatherMap
-│   ├── sensor_extractor.py           # Simulates sensor data extraction (e.g. air quality)
-│   └── social_extractor.py           # Uses transformers to perform sentiment analysis on social texts
-│
-├── load/
-│   ├── __init__.py
-│   └── db_loader.py                  # Loads extracted data into a SQLite database
-│
-├── transform/
-│   ├── __init__.py
-│   └── data_transform.py             # Transforms and merges raw data, calculates an urban stress index
+│ <br>
+├── extract/<br>
+│   ├── __init__.py                   # (Empty file to mark package)<br>
+│   ├── weather_extractor.py          # Fetches weather data from OpenWeatherMap<br>
+│   ├── sensor_extractor.py           # Simulates sensor data extraction (e.g. air quality)<br>
+│   └── social_extractor.py           # Uses transformers to perform sentiment analysis on social texts<br>
+│<br>
+├── load/<br>
+│   ├── __init__.py<br>
+│   └── db_loader.py                  # Loads extracted data into a SQLite database<br>
+│<br>
+├── transform/<br>
+│   ├── __init__.py<br>
+│   └── data_transform.py             # Transforms and merges raw data, calculates an urban stress index<br>
 │
 ├── dashboard/
 │   ├── __init__.py
