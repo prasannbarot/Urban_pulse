@@ -22,11 +22,11 @@ This project extracts live data from APIs (e.g., weather, simulated sensors, and
 
 ## 📂 Directory Structure
 
-urban-pulse/
-├── data/
-│   ├── sample/                       
-│   │   └── weather_Toronto.json      # Sample weather JSON (created during testing)
-│   └── schemas/                      # (Optional) JSON schemas for raw data validation
+urban-pulse/ <br>
+├── data/ <br>
+│   ├── sample/     <br>                  
+│   │   └── weather_Toronto.json      # Sample weather JSON (created during testing) <br>
+│   └── schemas/                      # (Optional) JSON schemas for raw data validation <br>
 │
 ├── extract/
 │   ├── __init__.py                   # (Empty file to mark package)
