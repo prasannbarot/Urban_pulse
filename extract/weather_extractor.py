@@ -1,0 +1,30 @@
+# extract/weather_extractor.py
+
+import requests
+import json
+
+def fetch_weather(city="Toronto", api_key="ae46737865d612636d2155263c18bad2"):
+    """
+    Fetch weather data from OpenWeatherMap API for the given city.
+    Returns JSON data.
+    """
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        raise Exception(f"Error fetching weather data: {response.status_code}")
+
+def save_weather_data(data, filename="data/sample/weather_Toronto.json"):
+    """
+    Save weather data to a JSON file.
+    """
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
+if __name__ == "__main__":
+    # Replace the API key with your own to test locally.
+    api_key = "YOUR_OPENWEATHER_API_KEY"
+    weather_data = fetch_weather(city="Toronto", api_key=api_key)
+    print("Weather Data:", weather_data)
+    save_weather_data(weather_data)

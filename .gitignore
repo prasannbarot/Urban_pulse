@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+urbanpulse.db
+data/sample/*.json
