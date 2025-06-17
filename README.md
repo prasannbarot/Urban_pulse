@@ -25,7 +25,7 @@ This project extracts live data from APIs (e.g., weather, simulated sensors, and
 urban-pulse/ <br>
 ├── data/ # Sample and schema files <br>
 ├── extract/ # Data extraction modules (weather, sensors, social media) <br>
-├── load/ # Database loader scripts (SQLite) <be>
+├── load/ # Database loader scripts (SQLite) <br>
 ├── transform/ # Data transformation and aggregation logic <br>
 ├── dashboard/ # Streamlit app <br>
 ├── orchestration/ # Airflow DAG for ELT orchestration <br>
