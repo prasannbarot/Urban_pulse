@@ -1,0 +1,49 @@
+# dashboard/app.py
+
+import streamlit as st
+import pandas as pd
+import sqlite3
+import matplotlib.pyplot as plt
+
+DB_PATH = "urbanpulse.db"
+
+def load_table(table_name):
+    conn = sqlite3.connect(DB_PATH)
+    df = pd.read_sql_query(f"SELECT * FROM {table_name}", conn)
+    conn.close()
+    return df
+
+st.title("🌆 Urban Pulse Dashboard")
+st.markdown("Real-time insights into urban well-being based on environment and sentiment.")
+
+# Weather Data
+st.header("🌤️ Weather Data")
+weather_df = load_table("weather")
+st.dataframe(weather_df)
+
+if not weather_df.empty:
+    fig1, ax1 = plt.subplots()
+    weather_df['temperature'].hist(ax=ax1, bins=10)
+    ax1.set_title("Temperature Distribution")
+    ax1.set_xlabel("Temperature (°C)")
+    st.pyplot(fig1)
+
+# Sensor Data
+st.header("🌫️ Sensor Data")
+sensor_df = load_table("sensor")
+st.dataframe(sensor_df)
+
+if not sensor_df.empty:
+    fig2, ax2 = plt.subplots()
+    sensor_df['air_quality_index'].hist(ax=ax2, bins=10, color='orange')
+    ax2.set_title("Air Quality Index Distribution")
+    ax2.set_xlabel("AQI")
+    st.pyplot(fig2)
+
+# Social Sentiment Data
+st.header("💬 Social Sentiment")
+social_df = load_table("social")
+st.dataframe(social_df)
+
+if not social_df.empty:
+    st.bar_chart(social_df['label'].value_counts())
