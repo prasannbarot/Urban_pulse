@@ -3,7 +3,7 @@
 import requests
 import json
 
-def fetch_weather(city="Toronto", api_key="YOUR_OPENWEATHER_API_KEY"):
+def fetch_weather(city="Toronto", api_key="ae46737865d612636d2155263c18bad2"):
     """
     Fetch weather data from OpenWeatherMap API for the given city.
     Returns JSON data.
@@ -24,7 +24,7 @@ def save_weather_data(data, filename="data/sample/weather_Toronto.json"):
 
 if __name__ == "__main__":
     # Replace the API key with your own to test locally.
-    api_key = "YOUR_OPENWEATHER_API_KEY"
+    api_key = "ae46737865d612636d2155263c18bad2"
     weather_data = fetch_weather(city="Toronto", api_key=api_key)
     print("Weather Data:", weather_data)
     save_weather_data(weather_data)
