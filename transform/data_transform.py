@@ -2,42 +2,54 @@
 
 import sqlite3
 import pandas as pd
+import numpy as np
+from sklearn.ensemble import IsolationForest
 
 def fetch_data(conn):
-    """
-    Fetch data from the raw tables.
-    Returns dataframes: weather_df, sensor_df, and social_df.
-    """
+    """Fetch data from the raw tables."""
     weather_df = pd.read_sql_query("SELECT * FROM weather", conn)
     sensor_df = pd.read_sql_query("SELECT * FROM sensor", conn)
     social_df = pd.read_sql_query("SELECT * FROM social", conn)
     return weather_df, sensor_df, social_df
 
 def transform_data(weather_df, sensor_df, social_df):
-    """
-    Merge data from various sources and compute an urban stress index.
-    For demonstration, we simulate a computation using sensor values and sentiment scores.
-    Returns a combined DataFrame.
-    """
-    # For simplicity, assume we have similar lengths and align by index.
-    sensor_df['air_quality_factor'] = sensor_df['air_quality_index'] / 100.0
-    social_df['sentiment_factor'] = social_df['score']
-    
-    # Create a combined DataFrame (simulation)
+    """Merge data, compute urban stress index, and detect anomalies."""
+    if any(df.empty for df in [weather_df, sensor_df, social_df]):
+        raise ValueError("One or more input DataFrames are empty")
+
+    # Normalize features
+    n = min(len(weather_df), len(sensor_df), len(social_df))
+    weather_df = weather_df.iloc[:n]
+    sensor_df = sensor_df.iloc[:n]
+    social_df = social_df.iloc[:n]
+
+    aqi_normalized = sensor_df['air_quality_index'] / 200.0
+    noise_normalized = sensor_df['noise_level'] / 100.0
+    sentiment_normalized = social_df['score']
+
+    # Create combined DataFrame
     df_combined = pd.DataFrame({
-        "temperature": weather_df["temperature"][:len(sensor_df)].values,
-        "humidity": weather_df["humidity"][:len(sensor_df)].values,
+        "timestamp": sensor_df["timestamp"],
+        "temperature": weather_df["temperature"],
+        "humidity": weather_df["humidity"],
         "air_quality_index": sensor_df["air_quality_index"],
         "noise_level": sensor_df["noise_level"],
-        "sentiment_factor": social_df["sentiment_factor"][:len(sensor_df)].values
+        "sentiment_factor": sentiment_normalized
     })
     
-    # A simulated urban stress index (weighted combination)
+    # Compute urban stress index
     df_combined["urban_stress_index"] = (
-        0.4 * df_combined["air_quality_index"] +
-        0.3 * df_combined["noise_level"] +
-        0.3 * (1 - df_combined["sentiment_factor"])
+        0.4 * aqi_normalized +
+        0.3 * noise_normalized +
+        0.3 * (1 - sentiment_normalized)
     )
+    
+    # Anomaly detection
+    iso_forest = IsolationForest(contamination=0.1, random_state=42)
+    features = df_combined[["air_quality_index", "noise_level", "sentiment_factor"]]
+    df_combined["anomaly"] = iso_forest.fit_predict(features)
+    df_combined["anomaly"] = df_combined["anomaly"].map({1: "Normal", -1: "Anomaly"})
+    
     return df_combined
 
 if __name__ == "__main__":
