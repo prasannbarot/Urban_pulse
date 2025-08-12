@@ -1,6 +1,6 @@
 # Configuration for Urban Pulse
 api:
-  openweathermap_key: "ae46737865d612636d2155263c18bad2"
+  openweathermap_key: "APK key"
 database:
   path: "urbanpulse.db"
 cities:
