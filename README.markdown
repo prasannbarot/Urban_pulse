@@ -135,8 +135,5 @@ urban-pulse/
 - Expand anomaly detection with clustering algorithms.
 - Deploy dashboard to Streamlit Cloud.
 
-## 📜 License
-MIT License. See [LICENSE](LICENSE) for details.
-
 ## 👤 Author
 *Built with 💻 by [Prasann Barot](https://linkedin.com/in/prasannbarot).*
