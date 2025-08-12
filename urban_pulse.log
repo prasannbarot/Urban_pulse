@@ -1,0 +1,121 @@
+2025-08-05 22:17:48,821 - INFO - Starting extraction phase
+2025-08-05 22:17:49,959 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-08-05 22:18:01,992 - INFO - Extraction completed successfully
+2025-08-05 22:18:01,992 - INFO - Starting loading phase
+2025-08-05 22:18:02,054 - INFO - Data loaded successfully
+2025-08-05 22:18:02,054 - INFO - Starting transformation phase
+2025-08-05 22:18:02,214 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494   Normal
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760   Normal
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-05 22:18:02,229 - INFO - Pipeline completed successfully
+2025-08-11 16:28:01,992 - INFO - Starting extraction phase
+2025-08-11 16:28:03,956 - INFO - Extraction completed successfully
+2025-08-11 16:28:03,956 - INFO - Starting loading phase
+2025-08-11 16:28:03,994 - INFO - Data loaded successfully
+2025-08-11 16:28:03,994 - INFO - Starting transformation phase
+2025-08-11 16:28:04,222 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494   Normal
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760   Normal
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-11 16:28:04,243 - INFO - Pipeline completed successfully
+2025-08-11 16:28:57,089 - INFO - Starting extraction phase
+2025-08-11 16:28:58,262 - INFO - Extraction completed successfully
+2025-08-11 16:28:58,262 - INFO - Starting loading phase
+2025-08-11 16:28:58,285 - INFO - Data loaded successfully
+2025-08-11 16:28:58,285 - INFO - Starting transformation phase
+2025-08-11 16:28:58,527 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494   Normal
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760   Normal
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-11 16:28:58,537 - INFO - Pipeline completed successfully
+2025-08-11 16:33:39,330 - INFO - Starting extraction phase
+2025-08-11 16:33:41,351 - INFO - Extraction completed successfully
+2025-08-11 16:33:41,352 - INFO - Starting loading phase
+2025-08-11 16:33:41,392 - INFO - Data loaded successfully
+2025-08-11 16:33:41,392 - INFO - Starting transformation phase
+2025-08-11 16:33:41,652 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494   Normal
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760   Normal
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-11 16:33:41,670 - INFO - Pipeline completed successfully
+2025-08-11 16:34:43,249 - INFO - Starting extraction phase
+2025-08-11 16:34:44,413 - INFO - Extraction completed successfully
+2025-08-11 16:34:44,413 - INFO - Starting loading phase
+2025-08-11 16:34:44,435 - INFO - Data loaded successfully
+2025-08-11 16:34:44,435 - INFO - Starting transformation phase
+2025-08-11 16:34:44,609 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494   Normal
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760   Normal
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-11 16:34:44,619 - INFO - Pipeline completed successfully
+2025-08-11 16:45:45,814 - INFO - Starting extraction phase
+2025-08-11 16:45:46,812 - INFO - Extraction completed successfully
+2025-08-11 16:45:46,812 - INFO - Starting loading phase
+2025-08-11 16:45:46,837 - INFO - Data loaded successfully
+2025-08-11 16:45:46,837 - INFO - Starting transformation phase
+2025-08-11 16:45:46,990 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494   Normal
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760   Normal
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-11 16:45:47,002 - INFO - Pipeline completed successfully
+2025-08-11 16:59:00,371 - INFO - Starting extraction phase
+2025-08-11 16:59:02,110 - INFO - Extraction completed successfully
+2025-08-11 16:59:02,111 - INFO - Starting loading phase
+2025-08-11 16:59:02,132 - INFO - Data loaded successfully
+2025-08-11 16:59:02,133 - INFO - Starting transformation phase
+2025-08-11 16:59:02,283 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494   Normal
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760  Anomaly
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-11 16:59:02,296 - INFO - Pipeline completed successfully
+2025-08-12 17:24:51,819 - INFO - Starting extraction phase
+2025-08-12 17:24:54,031 - INFO - Extraction completed successfully
+2025-08-12 17:24:54,032 - INFO - Starting loading phase
+2025-08-12 17:24:54,081 - INFO - Data loaded successfully
+2025-08-12 17:24:54,081 - INFO - Starting transformation phase
+2025-08-12 17:24:54,264 - INFO - Transformed Data Preview:
+                    timestamp  temperature  humidity  ...  sentiment_factor  urban_stress_index  anomaly
+0  2025-06-17T13:46:47.091209        25.24      69.0  ...          0.999677            0.452467   Normal
+1  2025-06-17T13:49:13.617899        24.81      69.0  ...          0.999886            0.474494  Anomaly
+2  2025-06-17T13:54:57.644878        24.81      69.0  ...          0.916400            0.357760  Anomaly
+3  2025-06-20T20:32:55.233176        23.65      61.0  ...          0.999677            0.317837   Normal
+4  2025-06-20T20:41:24.526275        23.42      62.0  ...          0.999886            0.197694   Normal
+
+[5 rows x 8 columns]
+2025-08-12 17:24:54,278 - INFO - Pipeline completed successfully

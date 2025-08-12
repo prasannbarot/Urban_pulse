@@ -8,7 +8,7 @@ def main():
     from extract.sensor_extractor import fetch_sensor_data
     from extract.social_extractor import fetch_social_sentiment
 
-    api_key = "YOUR_OPENWEATHER_API_KEY"  # Replace with your API key
+    api_key = "# Replace with your API key"  
     weather_data = fetch_weather(city="Toronto", api_key=api_key)
     sensor_data = fetch_sensor_data()
     social_texts = [
