@@ -127,7 +127,7 @@ urban-pulse/
 3. Start Airflow and trigger the `urban_pulse_etl` DAG.
 
 ## 📸 Screenshots
-*Add screenshots of the Streamlit dashboard here for GitHub/LinkedIn.*
+
 
 ## 🚀 Future Enhancements
 - Add time-series forecasting for Urban Stress Index.
