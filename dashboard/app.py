@@ -20,8 +20,12 @@ def load_table(table_name):
     return df
 
 # Load config
-with open("config.yaml", "r") as f:
-    config = yaml.safe_load(f)
+try:
+    with open("config.yaml", "r") as f:
+        config = yaml.safe_load(f)
+except FileNotFoundError:
+    st.error("Configuration file (config.yaml) not found. Please ensure it exists in the project root.")
+    config = {"cities": ["Toronto", "Vancouver", "Montreal"]}
 
 st.title("🌆 Urban Pulse Dashboard")
 st.markdown("Real-time insights into urban well-being based on environment and sentiment.")
@@ -34,9 +38,14 @@ st.header("🌤️ Weather Data")
 weather_df = load_table("weather")
 if not weather_df.empty:
     weather_df = weather_df[weather_df["city"] == city]
-    st.dataframe(weather_df)
-    fig1 = px.histogram(weather_df, x="temperature", nbins=10, title="Temperature Distribution")
-    st.plotly_chart(fig1)
+    if not weather_df.empty:
+        st.dataframe(weather_df)
+        fig1 = px.histogram(weather_df, x="temperature", nbins=10, title=f"Temperature Distribution in {city}")
+        st.plotly_chart(fig1)
+    else:
+        st.warning(f"No weather data available for {city}. Run `python main.py` to fetch data.")
+else:
+    st.warning("No weather data available. Run `python main.py` to fetch data.")
 
 # Sensor Data
 st.header("🌫️ Sensor Data")
@@ -45,6 +54,8 @@ if not sensor_df.empty:
     st.dataframe(sensor_df)
     fig2 = px.histogram(sensor_df, x="air_quality_index", nbins=10, title="Air Quality Index Distribution", color_discrete_sequence=['orange'])
     st.plotly_chart(fig2)
+else:
+    st.warning("No sensor data available. Run `python main.py` to fetch data.")
 
 # Social Sentiment Data
 st.header("💬 Social Sentiment")
@@ -53,6 +64,8 @@ if not social_df.empty:
     st.dataframe(social_df)
     fig3 = px.bar(social_df["label"].value_counts(), title="Sentiment Distribution")
     st.plotly_chart(fig3)
+else:
+    st.warning("No social sentiment data available. Run `python main.py` to fetch data.")
 
 # Urban Stress Index
 st.header("📈 Urban Stress Index")
@@ -60,10 +73,11 @@ conn = sqlite3.connect(DB_PATH)
 weather_df, sensor_df, social_df = pd.read_sql_query("SELECT * FROM weather", conn), \
                                   pd.read_sql_query("SELECT * FROM sensor", conn), \
                                   pd.read_sql_query("SELECT * FROM social", conn)
-from transform.data_transform import transform_data  # Absolute import
+from transform.data_transform import transform_data
 transformed_df = transform_data(weather_df, sensor_df, social_df)
 if not transformed_df.empty:
     fig4 = px.line(transformed_df, x="timestamp", y="urban_stress_index", title="Urban Stress Index Over Time")
     st.plotly_chart(fig4)
-
+else:
+    st.warning("No urban stress index data available. Ensure data is loaded in the database.")
 conn.close()
