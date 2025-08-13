@@ -127,7 +127,11 @@ urban-pulse/
 2. Move `orchestration/urban_pulse_dag.py` to your Airflow DAGs folder.
 3. Start Airflow and trigger the `urban_pulse_etl` DAG.
 
-## 📸 Screenshots
+## 📸 Dashboard Application
+
+
+https://github.com/user-attachments/assets/34dd562e-6285-4321-afcc-39b562468a82
+
 
 
 ## 🚀 Future Enhancements
