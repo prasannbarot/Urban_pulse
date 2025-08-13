@@ -119,3 +119,31 @@
 
 [5 rows x 8 columns]
 2025-08-12 17:24:54,278 - INFO - Pipeline completed successfully
+2025-08-13 11:47:21,127 - INFO - Starting Urban Pulse pipeline
+2025-08-13 11:47:21,144 - INFO - Fetching weather data for Toronto
+2025-08-13 11:47:21,333 - INFO - Successfully fetched weather data for Toronto
+2025-08-13 11:47:21,345 - INFO - Weather data loaded for Toronto
+2025-08-13 11:47:21,345 - INFO - Fetching weather data for Vancouver
+2025-08-13 11:47:21,456 - INFO - Successfully fetched weather data for Vancouver
+2025-08-13 11:47:21,462 - INFO - Weather data loaded for Vancouver
+2025-08-13 11:47:21,462 - INFO - Fetching weather data for Montreal
+2025-08-13 11:47:21,581 - INFO - Successfully fetched weather data for Montreal
+2025-08-13 11:47:21,590 - INFO - Weather data loaded for Montreal
+2025-08-13 11:47:21,598 - INFO - Sensor data loaded successfully
+2025-08-13 11:47:23,337 - INFO - Social sentiment data loaded successfully
+2025-08-13 11:47:23,337 - INFO - Starting transformation phase
+2025-08-13 11:47:23,570 - INFO - Data transformation and loading completed
+2025-08-13 11:59:59,114 - INFO - Starting Urban Pulse pipeline
+2025-08-13 11:59:59,115 - INFO - Fetching weather data for Toronto
+2025-08-13 11:59:59,262 - INFO - Successfully fetched weather data for Toronto
+2025-08-13 11:59:59,273 - INFO - Weather data loaded for Toronto
+2025-08-13 11:59:59,273 - INFO - Fetching weather data for Vancouver
+2025-08-13 11:59:59,379 - INFO - Successfully fetched weather data for Vancouver
+2025-08-13 11:59:59,391 - INFO - Weather data loaded for Vancouver
+2025-08-13 11:59:59,391 - INFO - Fetching weather data for Montreal
+2025-08-13 11:59:59,497 - INFO - Successfully fetched weather data for Montreal
+2025-08-13 11:59:59,510 - INFO - Weather data loaded for Montreal
+2025-08-13 11:59:59,520 - INFO - Sensor data loaded successfully
+2025-08-13 12:00:00,407 - INFO - Social sentiment data loaded successfully
+2025-08-13 12:00:00,407 - INFO - Starting transformation phase
+2025-08-13 12:00:00,583 - INFO - Data transformation and loading completed
