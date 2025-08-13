@@ -46,6 +46,7 @@ urban-pulse/
 ├── config.yaml
 ├── requirements.txt
 ├── Dockerfile
+├── check_weather.py
 ├── .gitignore
 └── README.md
 ```
